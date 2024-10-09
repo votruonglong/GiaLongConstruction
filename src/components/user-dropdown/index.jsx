@@ -1,14 +1,10 @@
-import React from 'react'
-import { Dropdown, Space, Avatar, Tag, Button } from 'antd'
-import { DownOutlined } from '@ant-design/icons'
-
-
-
+import React from 'react';
+import { Dropdown, Space, Avatar, Tag, Button } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
+import './UserDropdown.css'; // Import file CSS
 
 const UserDropdown = ({ handleLogin }) => {
-
     const items = [
-
         {
             key: '1',
             label: 'My Account',
@@ -25,12 +21,12 @@ const UserDropdown = ({ handleLogin }) => {
             label: (
                 <Button onClick={() => console.log("log out...")} style={{ width: "100%" }}>
                     Logout
-                </Button >
+                </Button>
             ),
             key: "3",
             style: { textAlign: "center" },
         },
-    ]
+    ];
 
     return (
         <Dropdown
@@ -39,16 +35,15 @@ const UserDropdown = ({ handleLogin }) => {
             }}
             trigger={["click"]}
         >
-            <a onClick={(e) => e.preventDefault()} style={{ color: "black" }}>
+            <a onClick={(e) => e.preventDefault()} className="user-dropdown">
                 <Space>
                     <Avatar size="large" src="https://i.pravatar.cc/300" />
-
                     <Tag color="blue">Hi Admin</Tag>
                     <DownOutlined />
                 </Space>
             </a>
         </Dropdown>
-    )
-}
+    );
+};
 
-export default UserDropdown
+export default UserDropdown;

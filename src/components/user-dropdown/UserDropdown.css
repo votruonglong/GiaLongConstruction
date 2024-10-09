@@ -1,0 +1,19 @@
+.user-dropdown {
+    display: flex;
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+}
+
+.user-dropdown .ant-space {
+    display: flex; /* Đảm bảo các phần tử con trong Space được hiển thị theo hàng */
+}
+
+@media (max-width: 768px) { /* Thay đổi cho màn hình nhỏ hơn */
+    .user-dropdown {
+        flex-direction: column; /* Chuyển thành hàng dọc */
+        align-items: flex-start; /* Căn trái */
+    }
+
+    .user-dropdown .ant-tag {
+        margin: 5px 0; /* Thêm khoảng cách cho tag */
+    }
+}

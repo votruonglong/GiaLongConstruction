@@ -25,7 +25,7 @@ import CarouselPage from '../components/carousel';
 const { Header, Content, Footer } = Layout;
 
 const CustomerLayout = () => {
-    const [isLogin, setIsLogin] = useState(true);
+    const [isLogin, setIsLogin] = useState(false);
     const [visible, setVisible] = useState(false);
 
     const items = [
