@@ -12,7 +12,7 @@ const SingleProject = ({ project }) => {
                     cover={
                         <img
                             alt={project.title}
-                            src={project.image}
+                            src={project.images?.imageUrl1}
                             style={{
                                 height: '200px',  // Chiều cao cố định cho ảnh
                                 objectFit: 'cover',  // Đảm bảo ảnh vừa với kích thước nhưng vẫn giữ tỷ lệ

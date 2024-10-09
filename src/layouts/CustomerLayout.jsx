@@ -91,10 +91,8 @@ const CustomerLayout = () => {
                 <Menu
                     theme="dark"
                     mode="horizontal"
-                    defaultSelectedKeys={['1']}
                     items={items}
                     style={{ flex: 1, minWidth: 0 }}
-                    responsive={false}
                 />
                 {isLogin ? (
                     <UserDropdown />
