@@ -3,7 +3,7 @@ import { Typography, Row, Col, Card, Image, Statistic } from 'antd';
 import { ProjectOutlined, UserOutlined, TeamOutlined, SmileOutlined } from '@ant-design/icons';
 import NhaO2 from '../../assets/imgs/DuAn/NHA-O-1.jpg';
 import image1 from '../../assets/imgs/carousel-3.jpg';
-import logo from '../../assets/imgs/logo.jpg'
+import logo from '../../assets/imgs/logo.jpg';
 
 const { Title, Paragraph } = Typography;
 
@@ -23,10 +23,9 @@ const AboutPage = () => {
                             src={image1}
                             alt="Company Building"
                             style={{
-                                borderRadius: '10px',
-                                objectFit: 'cover',
-                                width: '100%',
-                                height: '400px',
+                                borderRadius: "12px",
+                                maxWidth: "100%", // Allow the image to scale down with the viewport
+                                height: "auto",
                                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
                             }}
                         />
@@ -68,10 +67,9 @@ const AboutPage = () => {
                             src={image1}
                             alt="Project History"
                             style={{
-                                borderRadius: '10px',
-                                objectFit: 'cover',
-                                width: '100%',
-                                height: '400px',
+                                borderRadius: "12px",
+                                maxWidth: "100%", // Allow the image to scale down with the viewport
+                                height: "auto",
                                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
                             }}
                         />
@@ -91,7 +89,7 @@ const AboutPage = () => {
                         </Card>
                     </Col>
                     <Col xs={24} sm={12} md={6}>
-                        <Card hoverable cover={<img alt="CEO" src={NhaO2} style={{ height: "300px", objectFit: 'cover' }} />}>
+                        <Card hoverable cover={<img alt="CTO" src={NhaO2} style={{ height: "300px", objectFit: 'cover' }} />}>
                             <Card.Meta title="Võ Thị Trúc Xuân" description="CTO" />
                         </Card>
                     </Col>
