@@ -5,7 +5,7 @@ import { useState } from 'react';
 import SearchComponent from '../search-component';
 import { PlayCircleFilled } from '@ant-design/icons';
 import NhaO1 from '../../assets/imgs/DuAn/NHA-O-1.jpg'
-import NhaO2 from '../../assets/imgs/DuAn/NHAO1.jpg'
+import NhaO2 from '../../assets/imgs/DuAn/NHA-O-4.jpg'
 import NhaO3 from '../../assets/imgs/DuAn/NHA-O-2.jpg'
 import NhaO4 from '../../assets/imgs/DuAn/NHA-0-3.jpg'
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, Row, Col, Card, Image, Statistic } from 'antd';
 import { ProjectOutlined, UserOutlined, TeamOutlined, SmileOutlined } from '@ant-design/icons';
-import NhaO2 from '../../assets/imgs/DuAn/NHAO1.jpg';
+import NhaO2 from '../../assets/imgs/DuAn/NHA-O-1.jpg';
 import image1 from '../../assets/imgs/carousel-3.jpg';
 
 const { Title, Paragraph } = Typography;
@@ -146,67 +146,71 @@ const AboutPage = () => {
             </div>
 
             {/* Achievements */}
-            <div style={{ backgroundColor: '#f7f7f7', padding: '20px', marginTop: '20px', textAlign: 'center', borderRadius: "18px" }}>
-                <Row gutter={[16, 16]} style={{ marginTop: '40px' }}>
-                    <Col xs={24}>
-                        <Title level={3} style={{ textAlign: 'center', marginBottom: '40px' }}>Thành tựu của chúng tôi</Title>
-                    </Col>
+            <Row gutter={[16, 16]} style={{ marginTop: '40px', textAlign: 'center' }}>
+                <Col xs={24}>
+                    <Title level={3} style={{ textAlign: 'center', marginBottom: '20px' }}>Thành tựu của chúng tôi</Title>
+                </Col>
 
-                    {/* Achievement 1 */}
-                    <Col xs={24} sm={12} md={8}>
-                        <Card
-                            hoverable
-                            style={{
-                                padding: '20px',
-                                borderRadius: '10px',
-                                backgroundColor: '#ffffff',
-                                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-                            }}
-                        >
-                            <Title level={4}>Dự án 1</Title>
-                            <Paragraph>
-                                Mô tả ngắn gọn về dự án 1 và những thành tựu đạt được.
-                            </Paragraph>
-                        </Card>
-                    </Col>
+                {/* Achievement 1 */}
+                <Col xs={24} sm={12} md={8}>
+                    <Card
+                        hoverable
+                        style={{
+                            padding: '20px',
+                            borderRadius: '10px',
+                            backgroundColor: '#fafafa',
+                            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                            height: '100%'
+                        }}
+                    >
+                        <ProjectOutlined style={{ fontSize: '48px', color: '#1890ff', marginBottom: '20px' }} />
+                        <Title level={4}>Giải thưởng Kiến trúc Xanh 2018</Title>
+                        <Paragraph>
+                            Được công nhận với thiết kế bền vững, chúng tôi đạt giải Kiến trúc Xanh 2018 với nhiều dự án tiêu biểu.
+                        </Paragraph>
+                    </Card>
+                </Col>
 
-                    {/* Achievement 2 */}
-                    <Col xs={24} sm={12} md={8}>
-                        <Card
-                            hoverable
-                            style={{
-                                padding: '20px',
-                                borderRadius: '10px',
-                                backgroundColor: '#ffffff',
-                                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-                            }}
-                        >
-                            <Title level={4}>Dự án 2</Title>
-                            <Paragraph>
-                                Mô tả ngắn gọn về dự án 2 và những thành tựu đạt được.
-                            </Paragraph>
-                        </Card>
-                    </Col>
+                {/* Achievement 2 */}
+                <Col xs={24} sm={12} md={8}>
+                    <Card
+                        hoverable
+                        style={{
+                            padding: '20px',
+                            borderRadius: '10px',
+                            backgroundColor: '#fafafa',
+                            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                            height: '100%'
+                        }}
+                    >
+                        <UserOutlined style={{ fontSize: '48px', color: '#faad14', marginBottom: '20px' }} />
+                        <Title level={4}>Top 10 Công ty Xây dựng Uy tín 2020</Title>
+                        <Paragraph>
+                            Chúng tôi tự hào khi được xếp vào top 10 công ty uy tín nhất trong lĩnh vực xây dựng vào năm 2020.
+                        </Paragraph>
+                    </Card>
+                </Col>
 
-                    {/* Achievement 3 */}
-                    <Col xs={24} sm={12} md={8}>
-                        <Card
-                            hoverable
-                            style={{
-                                padding: '20px',
-                                borderRadius: '10px',
-                                backgroundColor: '#ffffff',
-                                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-                            }}
-                        >
-                            <Title level={4}>Dự án 3</Title>
-                            <Paragraph>
-                                Mô tả ngắn gọn về dự án 3 và những thành tựu đạt được.
-                            </Paragraph>
-                        </Card>
-                    </Col>
-                </Row>
-            </div>
+                {/* Achievement 3 */}
+                <Col xs={24} sm={12} md={8}>
+                    <Card
+                        hoverable
+                        style={{
+                            padding: '20px',
+                            borderRadius: '10px',
+                            backgroundColor: '#fafafa',
+                            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                            height: '100%'
+                        }}
+                    >
+                        <SmileOutlined style={{ fontSize: '48px', color: '#52c41a', marginBottom: '20px' }} />
+                        <Title level={4}>Khách hàng hài lòng 98%</Title>
+                        <Paragraph>
+                            Với tỷ lệ hài lòng 98% từ khách hàng, chúng tôi tiếp tục nỗ lực mang lại dịch vụ tốt nhất.
+                        </Paragraph>
+                    </Card>
+                </Col>
+            </Row>
         </div>
     );
 };
