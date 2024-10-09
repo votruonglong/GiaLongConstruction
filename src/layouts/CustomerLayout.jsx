@@ -25,7 +25,7 @@ import CarouselPage from '../components/carousel';
 const { Header, Content, Footer } = Layout;
 
 const CustomerLayout = () => {
-    const [isLogin, setIsLogin] = useState(false);
+    const [isLogin, setIsLogin] = useState(true);
     const [visible, setVisible] = useState(false);
 
     const items = [
@@ -74,7 +74,16 @@ const CustomerLayout = () => {
 
     return (
         <Layout style={{ minHeight: "100vh" }}>
-            <Header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <Header style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                right: 0,
+                zIndex: 1,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between'
+            }}>
                 <div style={{ display: "flex", alignItems: "center" }}>
                     <img src={hat} alt="Logo" style={{ width: '50px', height: '50px' }} />
                     <div style={{ marginLeft: '10px', color: 'white' }}>Gia Long Construction</div>
@@ -117,11 +126,11 @@ const CustomerLayout = () => {
             <Content style={{
                 padding: '0 24px',
                 flex: '1',
-                overflowY: 'auto',
+                overflowY: 'scroll',
                 overflowX: 'hidden',
-                margin: '0 auto',
+                margin: '64px auto 0', // Adjust margin to avoid overlapping with fixed header
                 width: '100%', // Set width to 100% to fill available space
-                maxWidth: '1600px', //
+                maxWidth: '1600px',
             }}>
                 {location.pathname === "/" ? <CarouselPage /> : null}
 

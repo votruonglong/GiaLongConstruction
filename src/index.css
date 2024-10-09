@@ -4,6 +4,7 @@
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  overflow-y: scroll;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,6 +18,11 @@
   padding: 0;
   border: 0;
   font-size: 100%;
+}
+
+
+body::-webkit-scrollbar {
+  display: none; /* Ẩn thanh cuộn trong các trình duyệt WebKit */
 }
 
 .ant-typography {
