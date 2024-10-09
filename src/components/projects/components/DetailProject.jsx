@@ -27,9 +27,15 @@ const projects = [
     },
     {
         id: 2,
-        title: 'Tour Đà Nẵng - Hội An',
-        description: 'Trải nghiệm bãi biển Đà Nẵng và phố cổ Hội An.',
+        title: 'Nhà ở',
+        description: 'Isoprene is synthesized from mixed linear butenes (butene-1 and butene-2) by catalytically isomerizing said mixed linear butenes to a mixture of cis and trans butene-2, hydroformylating the butene-2',
         price: 3200000,
+        code: 'HNMCOTP-M023-24',
+        NamThietKe: 2024,
+        LoaiCongTrinh: "Nhà ở",
+        DiaDiem: 'Nha Trang',
+        DienTichDat: '129,7 m2',
+        DienTichXayDung: '100 m2',
         images: [
             'https://via.placeholder.com/600x400.png?text=Hà+Nội+1',
             'https://via.placeholder.com/600x400.png?text=Hà+Nội+2',
@@ -38,9 +44,15 @@ const projects = [
     },
     {
         id: 3,
-        title: 'Tour Nha Trang',
-        description: 'Thư giãn tại các bãi biển đẹp và thưởng thức hải sản tươi sống.',
+        title: 'Nhà ở',
+        description: 'Isoprene is synthesized from mixed linear butenes (butene-1 and butene-2) by catalytically isomerizing said mixed linear butenes to a mixture of cis and trans butene-2, hydroformylating the butene-2',
         price: 3200000,
+        code: 'HNMCOTP-M023-24',
+        NamThietKe: 2024,
+        LoaiCongTrinh: "Nhà ở",
+        DiaDiem: 'Nha Trang',
+        DienTichDat: '129,7 m2',
+        DienTichXayDung: '100 m2',
         images: [
             'https://via.placeholder.com/600x400.png?text=Hà+Nội+1',
             'https://via.placeholder.com/600x400.png?text=Hà+Nội+2',
@@ -49,9 +61,15 @@ const projects = [
     },
     {
         id: 4,
-        title: 'Tour Sapa',
-        description: 'Khám phá những thửa ruộng bậc thang và văn hóa dân tộc thiểu số.',
+        title: 'Nhà ở',
+        description: 'Isoprene is synthesized from mixed linear butenes (butene-1 and butene-2) by catalytically isomerizing said mixed linear butenes to a mixture of cis and trans butene-2, hydroformylating the butene-2',
         price: 3200000,
+        code: 'HNMCOTP-M023-24',
+        NamThietKe: 2024,
+        LoaiCongTrinh: "Nhà ở",
+        DiaDiem: 'Nha Trang',
+        DienTichDat: '129,7 m2',
+        DienTichXayDung: '100 m2',
         images: [
             'https://via.placeholder.com/600x400.png?text=Hà+Nội+1',
             'https://via.placeholder.com/600x400.png?text=Hà+Nội+2',
@@ -60,9 +78,15 @@ const projects = [
     },
     {
         id: 5,
-        title: 'Tour Sapa',
-        description: 'Khám phá những thửa ruộng bậc thang và văn hóa dân tộc thiểu số.',
+        title: 'Nhà ở',
+        description: 'Isoprene is synthesized from mixed linear butenes (butene-1 and butene-2) by catalytically isomerizing said mixed linear butenes to a mixture of cis and trans butene-2, hydroformylating the butene-2',
         price: 3200000,
+        code: 'HNMCOTP-M023-24',
+        NamThietKe: 2024,
+        LoaiCongTrinh: "Nhà ở",
+        DiaDiem: 'Nha Trang',
+        DienTichDat: '129,7 m2',
+        DienTichXayDung: '100 m2',
         images: [
             'https://via.placeholder.com/600x400.png?text=Hà+Nội+1',
             'https://via.placeholder.com/600x400.png?text=Hà+Nội+2',
@@ -71,9 +95,15 @@ const projects = [
     },
     {
         id: 6,
-        title: 'Tour Sapa',
-        description: 'Khám phá những thửa ruộng bậc thang và văn hóa dân tộc thiểu số.',
+        title: 'Nhà ở',
+        description: 'Isoprene is synthesized from mixed linear butenes (butene-1 and butene-2) by catalytically isomerizing said mixed linear butenes to a mixture of cis and trans butene-2, hydroformylating the butene-2',
         price: 3200000,
+        code: 'HNMCOTP-M023-24',
+        NamThietKe: 2024,
+        LoaiCongTrinh: "Nhà ở",
+        DiaDiem: 'Nha Trang',
+        DienTichDat: '129,7 m2',
+        DienTichXayDung: '100 m2',
         images: [
             'https://via.placeholder.com/600x400.png?text=Hà+Nội+1',
             'https://via.placeholder.com/600x400.png?text=Hà+Nội+2',
@@ -82,9 +112,15 @@ const projects = [
     },
     {
         id: 7,
-        title: 'Tour Sapa',
-        description: 'Khám phá những thửa ruộng bậc thang và văn hóa dân tộc thiểu số.',
+        title: 'Nhà ở',
+        description: 'Isoprene is synthesized from mixed linear butenes (butene-1 and butene-2) by catalytically isomerizing said mixed linear butenes to a mixture of cis and trans butene-2, hydroformylating the butene-2',
         price: 3200000,
+        code: 'HNMCOTP-M023-24',
+        NamThietKe: 2024,
+        LoaiCongTrinh: "Nhà ở",
+        DiaDiem: 'Nha Trang',
+        DienTichDat: '129,7 m2',
+        DienTichXayDung: '100 m2',
         images: [
             'https://via.placeholder.com/600x400.png?text=Hà+Nội+1',
             'https://via.placeholder.com/600x400.png?text=Hà+Nội+2',
@@ -130,17 +166,18 @@ const DetailProject = () => {
             <Row gutter={16}>
                 {/* Hình ảnh tour */}
                 <Col xs={24} md={12}>
-                    <Carousel
-                        autoplay
-                        dots
-                        afterChange={setCurrentImage}
-                    >
+                    <Carousel autoplay dots afterChange={setCurrentImage}>
                         {project.images.map((image, index) => (
                             <div key={index}>
                                 <img
                                     alt={project.title}
                                     src={image}
-                                    style={{ width: '100%', borderRadius: '12px', height: '400px', objectFit: 'cover' }}
+                                    style={{
+                                        width: '100%',
+                                        borderRadius: '12px',
+                                        height: '400px',
+                                        objectFit: 'cover',
+                                    }}
                                 />
                             </div>
                         ))}
@@ -155,7 +192,7 @@ const DetailProject = () => {
                                         width: '100%',
                                         borderRadius: '8px',
                                         cursor: 'pointer',
-                                        border: currentImage === index ? '2px solid #1890ff' : 'none'
+                                        border: currentImage === index ? '2px solid #1890ff' : 'none',
                                     }}
                                     onClick={() => setCurrentImage(index)} // Thay đổi hình ảnh hiện tại khi click
                                 />
@@ -179,15 +216,17 @@ const DetailProject = () => {
                                     <Descriptions.Item label="Loại công trình">{project.LoaiCongTrinh}</Descriptions.Item>
                                     <Descriptions.Item label="Năm thiết kế">{project.NamThietKe}</Descriptions.Item>
                                 </Descriptions>
-                                <Button type="primary" size="large" style={{ marginTop: '20px', alignItems: "end" }}>
+                                <Button
+                                    type="primary"
+                                    size="large"
+                                    style={{ marginTop: '20px', width: '100%' }} // Chiều rộng 100% cho button
+                                >
                                     Liên hệ ngay
                                 </Button>
                             </div>
                         </div>
                     </Card>
-
                 </Col>
-
             </Row>
         </div>
     );
