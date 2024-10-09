@@ -1,25 +1,27 @@
 import React from 'react';
 import { Card, Row, Col, Typography, Image } from 'antd';
-import NHA03 from '../../assets/imgs/DuAn/NHA-0-3.jpg'
+import NHA03 from '../../assets/imgs/DuAn/NHA-0-3.jpg';
 
 const { Title, Paragraph } = Typography;
 
 const Introduction = () => {
     return (
-        <div style={{ padding: '40px 20px' }}>
-            <Row align="middle" style={{ display: 'flex', alignItems: 'center' }}>
-                {/* Giảm padding giữa các cột bằng cách giảm kích thước các cột hoặc điều chỉnh margin */}
-                <Col xs={24} md={10} style={{ paddingRight: '10px' }}> {/* Điều chỉnh paddingRight để ảnh gần hơn */}
+        <div style={{ padding: '20px' }}>
+            <Row align="middle" gutter={[16, 16]}>
+                <Col xs={24} sm={12} md={10} style={{ paddingRight: '10px' }}>
                     <Image
                         src={NHA03}
                         alt="Gia Long Logo"
-                        width="90%"  // Tăng kích thước hình ảnh
-                        style={{ borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}
+                        style={{
+                            borderRadius: '10px',
+                            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                            width: '100%', // Ensure image takes full width of the column
+                        }}
                         preview={false}
                     />
                 </Col>
 
-                <Col xs={24} md={14} style={{ paddingLeft: '10px' }}> {/* Điều chỉnh paddingLeft để nội dung gần hơn */}
+                <Col xs={24} sm={12} md={14}>
                     <Card
                         hoverable
                         style={{

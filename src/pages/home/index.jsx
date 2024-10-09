@@ -7,12 +7,12 @@ import Achievements from "../../components/thanh-tuu"
 const HomePage = () => {
 
     return (
-        <div>
+        <>
             <Introduction />
             <Achievements />
             <ProjectsPage />
             <CustomerReviews />
-        </div>
+        </>
     )
 
 }

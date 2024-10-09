@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import {
     Breadcrumb,
     Layout,
@@ -6,10 +6,10 @@ import {
     theme,
     Dropdown,
     Space,
-    Tag,
     Avatar,
-    Button
-} from 'antd'
+    Button,
+    Drawer,
+} from 'antd';
 import {
     HomeOutlined,
     ProjectOutlined,
@@ -20,23 +20,13 @@ import hat from "../assets/hat.svg";
 import { useLocation, Link, Outlet } from 'react-router-dom';
 import HomePage from '../pages/home';
 import UserDropdown from '../components/user-dropdown';
-import { useState } from 'react';
 import CarouselPage from '../components/carousel';
-
-
 
 const { Header, Content, Footer } = Layout;
 
-
-
-
-
 const CustomerLayout = () => {
-
-
-
-    const [isLogin, setIsLogin] = useState(false)
-
+    const [isLogin, setIsLogin] = useState(false);
+    const [visible, setVisible] = useState(false);
 
     const items = [
         {
@@ -65,10 +55,9 @@ const CustomerLayout = () => {
         token: { colorBgContainer, borderRadiusLG },
     } = theme.useToken();
 
-    const location = useLocation()
+    const location = useLocation();
 
     const pathSnippets = location.pathname.split('/').filter(i => i);
-
     const breadcrumbItems = [
         <Breadcrumb.Item key="home">
             <Link to="/">Home</Link>
@@ -84,14 +73,11 @@ const CustomerLayout = () => {
     ];
 
     return (
-        <Layout style={{ height: "100vh" }}>
-            <Header style={{ display: 'flex', alignItems: 'center' }}>
-                <div style={{ marginRight: '20px', display: "flex" }}>
-                    <img
-                        src={hat}
-                        alt="Logo"
-                        style={{ width: '50px', height: '50px' }}
-                    />
+        <Layout style={{ minHeight: "100vh" }}>
+            <Header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                    <img src={hat} alt="Logo" style={{ width: '50px', height: '50px' }} />
+                    <div style={{ marginLeft: '10px', color: 'white' }}>Gia Long Construction</div>
                 </div>
                 <Menu
                     theme="dark"
@@ -99,20 +85,43 @@ const CustomerLayout = () => {
                     defaultSelectedKeys={['1']}
                     items={items}
                     style={{ flex: 1, minWidth: 0 }}
-
+                    responsive={false}
                 />
-                {isLogin ? <UserDropdown /> : <Link to="/login" style={{ color: "white" }}>Đăng nhập</Link>}
-
+                {isLogin ? (
+                    <UserDropdown />
+                ) : (
+                    <Link to="/login" style={{ color: "white" }}>Đăng nhập</Link>
+                )}
+                <Button
+                    type="primary"
+                    onClick={() => setVisible(true)}
+                    style={{ marginLeft: '16px', display: 'none' }} // Hide button for larger screens
+                >
+                    Menu
+                </Button>
+                <Drawer
+                    title="Menu"
+                    placement="right"
+                    closable={true}
+                    onClose={() => setVisible(false)}
+                    visible={visible}
+                >
+                    <Menu
+                        mode="inline"
+                        items={items}
+                        onClick={() => setVisible(false)} // Close drawer when menu item is clicked
+                    />
+                </Drawer>
             </Header>
 
             <Content style={{
-                padding: '0 48px',
+                padding: '0 24px',
                 flex: '1',
                 overflowY: 'auto',
-                maxWidth: '1800px', // Điều chỉnh chiều rộng tối đa
-                margin: '0 auto', // Căn giữa nếu chiều rộng nhỏ hơn màn hình
-                height: 'calc(100vh - 150px)', // Điều chỉnh chiều cao
-                scrollbarWidth: 'none',
+                overflowX: 'hidden',
+                margin: '0 auto',
+                width: '100%', // Set width to 100% to fill available space
+                maxWidth: '1600px', //
             }}>
                 {location.pathname === "/" ? <CarouselPage /> : null}
 
@@ -122,9 +131,9 @@ const CustomerLayout = () => {
                 <div
                     style={{
                         background: colorBgContainer,
-                        minHeight: 'calc(100vh - 200px)',
                         padding: 24,
                         borderRadius: borderRadiusLG,
+                        width: '100%',
                     }}
                 >
                     {location.pathname === "/" ? <HomePage /> : <Outlet />}
@@ -134,7 +143,7 @@ const CustomerLayout = () => {
                 Web công ty Gia Long ©{new Date().getFullYear()} Được code bởi Trường Long
             </Footer>
         </Layout>
-    )
-}
+    );
+};
 
-export default CustomerLayout
+export default CustomerLayout;
