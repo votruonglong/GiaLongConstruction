@@ -4,7 +4,6 @@ import SingleProject from '../single-project';
 import { useState } from 'react';
 import SearchComponent from '../search-component';
 import NhaO1 from '../../assets/imgs/DuAn/NHA-O-1.jpg'
-import NhaO4 from '../../assets/imgs/DuAn/NHA-O-4.jpg'
 import NhaO2 from '../../assets/imgs/DuAn/NHA-O-2.jpg'
 import NhaO3 from '../../assets/imgs/DuAn/NHA-0-3.jpg'
 
@@ -33,7 +32,7 @@ const projects = [
         id: 4,
         title: 'Nhà ở 2 mặt tiền kết hợp kinh doanh',
         description: 'Nhà ở 2 mặt tiền kết hợp kinh doanh',
-        image: NhaO4,
+        image: NhaO3,
     },
     {
         id: 5,
