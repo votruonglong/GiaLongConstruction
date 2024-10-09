@@ -105,8 +105,17 @@ const CustomerLayout = () => {
 
             </Header>
 
-            <Content style={{ padding: '0 48px', flex: '1', overflowY: 'auto' }}>
-                <CarouselPage />
+            <Content style={{
+                padding: '0 48px',
+                flex: '1',
+                overflowY: 'auto',
+                maxWidth: '1800px', // Điều chỉnh chiều rộng tối đa
+                margin: '0 auto', // Căn giữa nếu chiều rộng nhỏ hơn màn hình
+                height: 'calc(100vh - 150px)', // Điều chỉnh chiều cao
+                scrollbarWidth: 'none',
+            }}>
+                {location.pathname === "/" ? <CarouselPage /> : null}
+
                 <Breadcrumb style={{ margin: '16px 0' }}>
                     {breadcrumbItems}
                 </Breadcrumb>

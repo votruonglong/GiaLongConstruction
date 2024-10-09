@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { Form, Input, Button, message, Typography, Card } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";
-import logo2 from "../../assets/react.svg";
+import logo from "../../assets/imgs/logo.jpg";
 import "./index.css";
 
 const { Title } = Typography;
@@ -23,7 +23,7 @@ const Login = () => {
         <div className="login-container">
             <Card className="login-card">
                 <div className="login-logo-container">
-                    <img src={logo2} alt="Logo" className="login-logo" />
+                    <img src={logo} alt="Logo" className="login-logo" />
                     <Title level={3} className="login-title">
                         Đăng nhập
                     </Title>

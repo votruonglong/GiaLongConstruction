@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Col, Pagination, Row } from 'antd';
+import { Card, Col, Pagination, Row, Typography } from 'antd';
 import SingleProject from '../single-project';
 import { useState } from 'react';
 import SearchComponent from '../search-component';
@@ -7,7 +7,7 @@ import NhaO1 from '../../assets/imgs/DuAn/NHA-O-1.jpg'
 import NhaO2 from '../../assets/imgs/DuAn/NHA-O-2.jpg'
 import NhaO3 from '../../assets/imgs/DuAn/NHA-0-3.jpg'
 
-
+const { Title } = Typography
 
 const projects = [
     {
@@ -67,7 +67,9 @@ const ProjectsPage = () => {
         setCurrentPage(page);
     };
     return (
+
         <div style={{ padding: '20px' }}>
+            <Title level={3} style={{ textAlign: 'center', marginTop: '40px', marginBottom: "40px" }}>Dự án nổi bậc</Title>
             <SearchComponent
                 searchFields={[
 
@@ -79,7 +81,6 @@ const ProjectsPage = () => {
                 ]}
 
             />
-            <h2 style={{ fontSize: "26px", marginTop: "10px" }}>DỰ ÁN</h2>
             <Row gutter={16}>
                 {currentTours.map((project) => (
                     <SingleProject project={project} key={project.id} />

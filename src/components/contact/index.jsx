@@ -18,7 +18,7 @@ const ContactPage = () => {
             <Title level={2} style={{ textAlign: 'center', color: "#16a34a" }}>Liên hệ với chúng tôi</Title>
             <Title level={5} style={{ textAlign: 'center', marginBottom: '40px' }}>Chúng tôi luôn sẵn sàng hỗ trợ bạn. Hãy liên hệ với chúng tôi bất cứ lúc nào.</Title>
             <Row gutter={[16, 16]} justify="center">
-                <Col xs={24} md={12}>
+                <Col xs={24} sm={24} md={12}>
                     <Card style={{ padding: '20px', borderRadius: '10px', backgroundColor: '#f9f9f9', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
                         <Title level={4} style={{ textAlign: 'center' }}>Thông tin liên hệ</Title>
                         <List
@@ -37,7 +37,7 @@ const ContactPage = () => {
                         />
                     </Card>
                 </Col>
-                <Col xs={24} md={12}>
+                <Col xs={24} sm={24} md={12}>
                     <Card style={{ padding: '20px', borderRadius: '10px' }}>
                         <Form form={form} onFinish={onFinish} layout="vertical">
                             <Form.Item

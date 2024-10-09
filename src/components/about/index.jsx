@@ -3,12 +3,17 @@ import { Typography, Row, Col, Card, Image, Statistic } from 'antd';
 import { ProjectOutlined, UserOutlined, TeamOutlined, SmileOutlined } from '@ant-design/icons';
 import NhaO2 from '../../assets/imgs/DuAn/NHA-O-1.jpg';
 import image1 from '../../assets/imgs/carousel-3.jpg';
+import logo from '../../assets/imgs/logo.jpg'
 
 const { Title, Paragraph } = Typography;
 
 const AboutPage = () => {
     return (
         <div style={{ padding: '40px 20px' }}>
+            {/* Logo */}
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '40px' }}>
+                <Image src={logo} width="120px" />
+            </div>
             {/* Introduction */}
             <div style={{ backgroundColor: '#f7f7f7', padding: '20px', borderRadius: "18px" }}>
                 <Title level={2} style={{ textAlign: 'center', marginBottom: '40px' }}>Về Gia Long Architecture & Construction</Title>
@@ -70,58 +75,6 @@ const AboutPage = () => {
                                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
                             }}
                         />
-                    </Col>
-                </Row>
-            </div>
-
-            {/* Achievements */}
-            <div style={{ backgroundColor: '#f7f7f7', padding: '30px', marginTop: '20px', borderRadius: "18px" }}>
-                <Title level={3} style={{ textAlign: 'center', marginTop: '40px', marginBottom: "40px" }}>Thành tựu của chúng tôi</Title>
-                <Row gutter={[16, 16]} justify="center" style={{ textAlign: 'center', marginBottom: '40px' }}>
-                    <Col xs={24} sm={12} md={6}>
-                        <Card
-                            style={{ background: '#ffffff', borderRadius: '10px', padding: '20px' }}
-                        >
-                            <Statistic
-                                title="Dự án hoàn thành"
-                                value={250}
-                                prefix={<ProjectOutlined style={{ color: '#1890ff', fontSize: '32px' }} />}
-                            />
-                        </Card>
-                    </Col>
-                    <Col xs={24} sm={12} md={6}>
-                        <Card
-                            style={{ background: '#ffffff', borderRadius: '10px', padding: '20px' }}
-                        >
-                            <Statistic
-                                title="Khách hàng"
-                                value={120}
-                                prefix={<UserOutlined style={{ color: '#52c41a', fontSize: '32px' }} />}
-                            />
-                        </Card>
-                    </Col>
-                    <Col xs={24} sm={12} md={6}>
-                        <Card
-                            style={{ background: '#ffffff', borderRadius: '10px', padding: '20px' }}
-                        >
-                            <Statistic
-                                title="Thành viên đội ngũ"
-                                value={50}
-                                prefix={<TeamOutlined style={{ color: '#faad14', fontSize: '32px' }} />}
-                            />
-                        </Card>
-                    </Col>
-                    <Col xs={24} sm={12} md={6}>
-                        <Card
-                            style={{ background: '#ffffff', borderRadius: '10px', padding: '20px' }}
-                        >
-                            <Statistic
-                                title="Khách hàng hài lòng"
-                                value={98}
-                                suffix="%"
-                                prefix={<SmileOutlined style={{ color: '#eb2f96', fontSize: '32px' }} />}
-                            />
-                        </Card>
                     </Col>
                 </Row>
             </div>

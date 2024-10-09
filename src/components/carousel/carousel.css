@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 400px; /* Adjust as necessary */
+    }
+
+    .carousel-content {
+        height: 400px; /* Adjust as necessary */
+    }
+}
