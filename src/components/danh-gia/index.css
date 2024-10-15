@@ -1,0 +1,36 @@
+.review-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.review-name {
+    font-size: 16px; /* Kích thước chữ bình thường */
+    margin: 0; /* Không có margin */
+}
+
+.review-rate {
+    font-size: 14px; /* Kích thước chữ bình thường */
+}
+
+@media (max-width: 768px) { /* Dành cho màn hình nhỏ (điện thoại) */
+    .review-name {
+        font-size: 14px; /* Kích thước chữ nhỏ hơn khi trên điện thoại */
+    }
+
+    .review-rate {
+        font-size: 12px; /* Kích thước chữ đánh giá nhỏ hơn khi trên điện thoại */
+    }
+    .review-header {
+        flex-direction: column; /* Các phần tử theo cột */
+        align-items: center; /* Căn giữa các phần tử */
+    }
+}
+
+@media (min-width: 769px) { /* Dành cho màn hình lớn (máy tính) */
+    .review-header {
+        flex-direction: column; /* Các phần tử theo cột */
+        align-items: center; /* Căn giữa các phần tử */
+    }
+}

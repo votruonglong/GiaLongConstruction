@@ -86,7 +86,6 @@ const CustomerLayout = () => {
             }}>
                 <div style={{ display: "flex", alignItems: "center" }}>
                     <img src={hat} alt="Logo" style={{ width: '50px', height: '50px' }} />
-                    <div style={{ marginLeft: '10px', color: 'white' }}>Gia Long Construction</div>
                 </div>
                 <Menu
                     theme="dark"
@@ -96,11 +95,23 @@ const CustomerLayout = () => {
                     style={{ flex: 1, minWidth: 0 }}
                     responsive={false}
                 />
-                {isLogin ? (
-                    <UserDropdown />
-                ) : (
-                    <Link to="/login" style={{ color: "white" }}>Đăng nhập</Link>
-                )}
+
+                <Link
+                    to="https://www.facebook.com/profile.php?id=100088100359357"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                        color: "black",
+                        height: "30px",
+                        width: "170px",
+                        display: "flex",
+                        alignItems: "center",
+                        backgroundColor: "white",
+                        justifyContent: "center",
+                        borderRadius: "12px"
+                    }}>
+                    Liên hệ: 0389496543
+                </Link>
                 <Button
                     type="primary"
                     onClick={() => setVisible(true)}

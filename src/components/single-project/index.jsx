@@ -1,32 +1,43 @@
 import React from 'react'
-import { Col, Card } from 'antd'
+import { Col, Card, Row, Typography } from 'antd'
 import { Link } from 'react-router-dom'
+
+const { Title, Paragraph } = Typography;
 
 const SingleProject = ({ project }) => {
     return (
-        <Col xs={24} sm={12} md={8} lg={6} style={{ padding: '10px' }}>
-            <Link to={`/duan/${project.id}`}>
-                <Card
-                    style={{ height: '420px' }}
-                    hoverable
-                    cover={
-                        <img
-                            alt={project.title}
-                            src={project.image}
-                            style={{
-                                height: '200px',  // Chiều cao cố định cho ảnh
-                                objectFit: 'cover',  // Đảm bảo ảnh vừa với kích thước nhưng vẫn giữ tỷ lệ
-                                width: '100%'  // Đảm bảo ảnh chiếm hết chiều rộng của Card
-                            }}
-                        />
-                    }
-
-                >
-                    <Card.Meta title={project.title} description={project.description} />
-                </Card>
-            </Link>
-
-        </Col >
+        <Card
+            hoverable
+            style={{
+                width: '100%', // Đặt chiều rộng 100% để phù hợp với kích thước của cột
+                maxWidth: 220, // Chiều rộng tối đa cho card
+                height: 300,
+                overflow: 'hidden'
+            }}
+            cover={
+                <img
+                    alt={project.title}
+                    src={project.image}
+                    style={{
+                        height: "200px",
+                        objectFit: "cover"
+                    }}
+                />}
+        >
+            <Card.Meta
+                title={<Title level={5}>{project.title}</Title>}
+                description={
+                    <Paragraph style={{
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap',
+                        marginBottom: 0, // Để loại bỏ margin dưới cùng
+                    }}>
+                        {project.description}
+                    </Paragraph>
+                }
+            />
+        </Card>
     )
 }
 

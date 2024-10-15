@@ -12,8 +12,8 @@ const { Title } = Typography
 const projects = [
     {
         id: 1,
-        title: 'Nhà ở gia đình',
-        description: 'Nhà ở gia đình',
+        title: 'Thành house - Nhà cấp 4 sân vườn đẹp, thư giãn',
+        description: 'Thiết kế nhà cấp 4 có sân vườn, không gian chill thư giãn, 3 phòng ngủ, phòng khách, bếp ăn.',
         image: NhaO1,
     },
     {
@@ -83,7 +83,10 @@ const ProjectsPage = () => {
             />
             <Row gutter={16}>
                 {currentTours.map((project) => (
-                    <SingleProject project={project} key={project.id} />
+                    <Col key={project.id} span={4} style={{ marginTop: "20px", padding: "5px" }} xs={12} sm={8} md={6} lg={4}>
+                        <SingleProject project={project} />
+                    </Col>
+
                 ))}
             </Row>
             <Pagination
@@ -91,7 +94,7 @@ const ProjectsPage = () => {
                 pageSize={pageSize}
                 total={projects.length}
                 onChange={handleChangePage}
-                style={{ textAlign: 'center', marginTop: '20px' }}
+                style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}
             />
 
         </div>

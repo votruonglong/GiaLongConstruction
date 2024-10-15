@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Row, Col, Avatar, Typography, Rate } from 'antd';
+import './index.css'
 
 const { Paragraph, Title } = Typography;
 
@@ -54,19 +55,27 @@ const CustomerReviews = () => {
             <Title level={2} style={{ textAlign: 'center', marginBottom: '40px' }}>Đánh giá khách hàng</Title>
             <Row gutter={[16, 16]}>
                 {customerReviews.map((review) => (
-                    <Col xs={24} sm={12} md={8} key={review.id}>
+                    <Col xs={12} sm={12} md={8} key={review.id}>
                         <Card
                             hoverable
                             style={{
                                 textAlign: 'center',
                                 borderRadius: '10px',
                                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                                height: '250px', // Chiều cao cố định cho mỗi card
+                                display: 'flex', // Để dễ dàng căn chỉnh các thành phần bên trong
+                                flexDirection: 'column', // Để các thành phần sắp xếp theo cột
+                                justifyContent: 'space-between', // Giữa các thành phần sẽ có khoảng cách đều
                             }}
                         >
-                            <Avatar src={review.avatar} size={64} style={{ marginBottom: '20px' }} />
-                            <Title level={4}>{review.name}</Title>
-                            <Rate disabled defaultValue={review.rating} style={{ marginBottom: '10px' }} />
-                            <Paragraph style={{ fontSize: '16px', lineHeight: '1.6' }}>{review.review}</Paragraph>
+                            <div className="review-header"> {/* Sử dụng class CSS */}
+                                <Avatar className='review-avatar' src={review.avatar} size={48} style={{ marginRight: '10px' }} />
+                                <div style={{ flex: 1, textAlign: 'left' }}>
+                                    <h3 level={5} className="review-name">{review.name}</h3>
+                                    <Rate disabled defaultValue={review.rating} className="review-rate" />
+                                </div>
+                            </div>
+                            <Paragraph style={{ fontSize: '14px', lineHeight: '1.4', margin: '0' }}>{review.review}</Paragraph> {/* Giảm kích thước chữ đánh giá và margin */}
                         </Card>
                     </Col>
                 ))}
