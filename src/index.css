@@ -4,7 +4,6 @@
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  overflow-y: scroll;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -12,8 +11,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-main {
+.ant-layout {
   background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}
+main {
+  overflow-y: hidden;
 }
 
 * {
