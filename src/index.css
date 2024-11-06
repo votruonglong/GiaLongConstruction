@@ -12,6 +12,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}
+
 * {
   font-family: "Poppins", sans-serif !important;
   margin: 0;
